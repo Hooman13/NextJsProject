@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { vazirmatn } from "next/font/local";
-import "./globals.css";
+// import { vazirmatn } from "next/font/local";
+// import "./globals.css";
 
-const vazirmatn = Vazirmatn({
-  subsets: ["latin", "arabic"],
-  display: "swap",
-});
+// const vazirmatn = Vazirmatn({
+//   subsets: ["latin", "arabic"],
+//   display: "swap",
+// });
 
 export const metadata: Metadata = {
   title: "جستجوی دکتر",
