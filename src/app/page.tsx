@@ -1,10 +1,13 @@
 type Post = {
+  count: number;
   id: number;
   title: string;
 };
 
 export default async function Home() {
-  const res: Response = await fetch("https://jsonplaceholder.org/posts");
+  const res: Response = await fetch("https://jsonplaceholder.org/posts", {
+    cache: "no-store",
+  });
   const posts: Post[] = await res.json();
   return (
     <main>
@@ -15,7 +18,7 @@ export default async function Home() {
         quasi voluptatum ipsum, corrupti officiis ab laudantium soluta obcaecati
         deserunt dignissimos!
       </p>
-      <ul>
+      <ul className="bg-red-200 ">
         {posts.map((post: Post) => (
           <li key={post.id}>{post.title}</li>
         ))}
