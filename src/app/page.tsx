@@ -9,20 +9,6 @@ export default async function Home() {
     cache: "no-store",
   });
   const posts: Post[] = await res.json();
-  return (
-    <main>
-      <h1>سلام رفیق!</h1>;
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Et ex est,
-        consectetur impedit numquam sit tempore voluptatem inventore ducimus
-        quasi voluptatum ipsum, corrupti officiis ab laudantium soluta obcaecati
-        deserunt dignissimos!
-      </p>
-      <ul className="bg-red-200 ">
-        {posts.map((post: Post) => (
-          <li key={post.id}>{post.title}</li>
-        ))}
-      </ul>
-    </main>
-  );
+  return;
+  <div></div>;
 }
