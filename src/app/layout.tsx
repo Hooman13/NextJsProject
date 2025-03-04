@@ -1,3 +1,6 @@
+import FooterComponent from "@/components/footer/footer.component";
+import GlobalSearchBoxComponent from "@/components/global-search-box/global-search-box";
+import HeaderComponent from "@/components/header/header.component";
 import type { Metadata } from "next";
 import { NextFont } from "next/dist/compiled/@next/font";
 import { Vazirmatn } from "next/font/google";
@@ -20,9 +23,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fa" dir="rtl" className={vazirmatn.className}>
-      <body>
-        <header>hello</header>
-        {children}
+      <body className="bg-black text-white grid grid-rows-[auto_1fr_auto] min-h-screen min-h-[100dvh]">
+        <HeaderComponent />
+        <main>
+          <GlobalSearchBoxComponent />
+        </main>
+        <FooterComponent />
       </body>
     </html>
   );

@@ -9,6 +9,9 @@ export default async function Home() {
     cache: "no-store",
   });
   const posts: Post[] = await res.json();
-  return;
-  <div></div>;
+  return (
+    <div className="text-7xl flex items-center justify-center my-10">
+      <p>سلام رفیق!</p>
+    </div>
+  );
 }
